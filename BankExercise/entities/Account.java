@@ -1,14 +1,14 @@
 package BankExercise.entities;
 
-public class account {
+public class Account {
     private String  holder;
     private int number;
     private double balance = 0;
 
-    public account() {
+    public Account() {
     }
 
-    public account(String holder, double initialDeposit, int number) {
+    public Account(String holder, double initialDeposit, int number) {
         this.number= number;
         this.holder = holder;
         deposit(initialDeposit);
