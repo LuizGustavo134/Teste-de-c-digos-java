@@ -9,10 +9,24 @@ public class Account {
     }
 
     public Account(String holder, double initialDeposit, int number) {
-        this.number= number;
         this.holder = holder;
+        this.number= number;
         deposit(initialDeposit);
 
+    }
+    public Account(String holder, int number){
+        this.number =number;
+        this.holder = holder;
+    }
+
+    @Override
+    public String toString() {
+        return "Account Data: "
+                + number
+                +", holder: "
+                +holder
+                +", balance: "
+                + String.format("%.2f",balance);
     }
 
     public int getNumber() {

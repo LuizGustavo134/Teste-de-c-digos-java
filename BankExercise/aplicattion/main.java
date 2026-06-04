@@ -19,7 +19,12 @@ public class main {
             System.out.println("Enter the initial value: ");
             double initialDeposit = scan.nextDouble();
             acount = new Account(holder, initialDeposit, number);
+        }else {
+            acount = new Account(holder,number);
         }
+        System.out.println();
+        System.out.println("Account data: ");
+        System.out.println(acount.toString());
 
 
 
