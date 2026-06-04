@@ -24,7 +24,22 @@ public class main {
         }
         System.out.println();
         System.out.println("Account data: ");
-        System.out.println(acount.toString());
+        System.out.println(acount);
+
+        System.out.println();
+        System.out.print("Enter a deposit value: ");
+        double depositValue = scan.nextDouble();
+        acount.deposit(depositValue);
+        System.out.println("Updated data");
+        System.out.println(acount);
+
+        System.out.println();
+        System.out.print("Enter a deposit value: ");
+        double withdrawValue = scan.nextDouble();
+        acount.withdraw(withdrawValue);
+        System.out.println("Updated data");
+        System.out.println(acount);
+
 
 
 
