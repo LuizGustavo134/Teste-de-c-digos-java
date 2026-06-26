@@ -16,6 +16,7 @@ public class main {
             sum += vect[i];
         }
         double avg = sum / n;
+
         System.out.printf("AVERAGE HEIGHT: %.2f%n", avg);
         scan.close();
     }}
