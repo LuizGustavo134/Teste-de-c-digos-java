@@ -3,23 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lego wars</title> <!--titúlo do site-->
+    <title>Lego Wars</title>
+
+    <link rel="stylesheet" href="/web/Style/Cascata.css">
 </head>
-<link rel="stylesheet"  href="/Python web/static/Cascata.css">
 <body>
-    <div class="login"><!--toda classe pode ser chamada por um ponto antes do nome no css--> 
+
+<div class="login">
     <h1>LEGO WARS</h1>
-    <input type="text" placeholder="name"><br><br>
-    <!-- placeholder é a tag que cria um campo de texto com um nome definido por você e desaparece quando algo é escrito -->
-    <input type="password" placeholder="password"><br><br>
-    <!-- onclick="window.print() comando para imprimir a pagina-->
+    <input type="text" placeholder="name"><br>
+    <input type="password" placeholder="password"><br>
     <button>Enter</button>
-    </div>
-    
-    <!--
-    1 background gradiente faz uma pintura degradê
-    2 A tag style substitui a folha de estilo 
-    3 Padding é a distância entre os elementos e a borda 
-    4 outline none exclui a linha ao redor da input -->
+</div>
+
+<div class="form-pedido">
+    <h2>NOVO PEDIDO</h2>
+
+    <label>Nome do cliente</label>
+    <input type="text" id="inp-cliente" placeholder="Ex: Luke Skywalker">
+
+    <label>Nome do produto</label>
+    <input type="text" id="inp-produto" placeholder="Ex: Millennium Falcon">
+
+    <label>Forma de pagamento</label>
+    <select id="inp-pagamento">
+        <option value="">Selecione...</option>
+        <option value="CARTAO">Cartão de crédito</option>
+        <option value="PIX">Pix</option>
+        <option value="BOLETO">Boleto</option>
+    </select>
+
+    <button class="btn-adicionar" onclick="adicionarPedido()">Adicionar pedido</button>
+</div>
+
+<div class="lista-pedidos" id="lista">
+    <h3>Pedidos realizados</h3>
+    <div id="itens"></div>
+</div>
+
+<script src="/web/Js/Script.js"></script>
+
 </body>
 </html>

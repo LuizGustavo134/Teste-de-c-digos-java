@@ -9,6 +9,7 @@ public class main {
         int n = 3;
         double[] vect = new double[n];
         for (int i=0; i<vect.length; i++) {
+            System.out.println(i);
             vect[i] = scan.nextDouble();
         }
         double sum = 0.0;

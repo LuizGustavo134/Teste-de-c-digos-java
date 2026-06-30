@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f1117;
+    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* ── Caixa de login ── */
+.login {
+    background: #1a1d27;
+    border: 1px solid #2e3350;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+}
+
+.login h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: #6ee7b7;
+    margin-bottom: 24px;
+}
+
+.login input {
+    background: #22263a;
+    border: 1px solid #2e3350;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+    padding: 10px 14px;
+    width: 100%;
+    margin-bottom: 14px;
+    outline: none;
+}
+
+.login input:focus {
+    border-color: #6ee7b7;
+}
+
+.login input::placeholder {
+    color: #64748b;
+}
+
+.login button {
+    background: #6ee7b7;
+    border: none;
+    border-radius: 8px;
+    color: #0f1117;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.login button:hover {
+    opacity: 0.85;
+}
+
+/* ── Formulário de pedido ── */
+.form-pedido {
+    background: #1a1d27;
+    border: 1px solid #2e3350;
+    border-radius: 12px;
+    padding: 32px 40px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.form-pedido h2 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #6ee7b7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-pedido label {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-pedido input,
+.form-pedido select {
+    background: #22263a;
+    border: 1px solid #2e3350;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+    padding: 10px 14px;
+    width: 100%;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.form-pedido input:focus,
+.form-pedido select:focus {
+    border-color: #6ee7b7;
+}
+
+.form-pedido input::placeholder {
+    color: #64748b;
+}
+
+.form-pedido select option {
+    background: #22263a;
+}
+
+.btn-adicionar {
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    color: #0f1117;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.btn-adicionar:hover {
+    opacity: 0.85;
+}
+
+/* ── Lista de pedidos ── */
+.lista-pedidos {
+    width: 100%;
+    max-width: 380px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-pedidos h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.pedido-item {
+    background: #1a1d27;
+    border: 1px solid #2e3350;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pedido-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.pedido-row span:first-child {
+    color: #64748b;
+}
+
+.pedido-row span:last-child {
+    color: #e2e8f0;
+    font-weight: bold;
+}
+
+.badge-pag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.badge-CARTAO { background: rgba(56,189,248,.15); color: #38bdf8; }
+.badge-PIX    { background: rgba(110,231,183,.15); color: #6ee7b7; }
+.badge-BOLETO { background: rgba(251,191,36,.15);  color: #fbbf24; }
