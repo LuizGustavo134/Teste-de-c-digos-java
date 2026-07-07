@@ -1,18 +1,23 @@
 package biblioteca.services;
 import java.util.ArrayList;
 import java.util.List;
+import biblioteca.entities.Livro;
 
-//manipuloação dos dados
+
+//Armazenamento dos dados
 
 public class Acervo {
-    public List<String> Estante = new ArrayList<String>(); // lista que guarda os dados do livro
+    public List<Livro> Estante = new ArrayList<Livro>(); // lista que guarda os dados do livro
+
     public Acervo(){}
-    public Acervo(List<String> Estante, String[] titulos, String[] generos, int[] faixa) {
+    public Acervo(List<Livro> Estante) {
         this.Estante = Estante;
-
     }
-    public void addlivro(){
-
+    public void addLivro(Livro Exemplar){ // Exemplar é a variál que vai receber o objeto
+        Estante.add(Exemplar);             //Necessário ser o exato nome da instância do construtor
+        for ( Livro Livros : Estante){     // onde o objeto foi criado
+            System.out.println(Livros);
+        }
     }
     //criar classe que receber o formulario em formato de lista
 

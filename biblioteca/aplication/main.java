@@ -1,9 +1,12 @@
 package biblioteca.aplication;
-
+import biblioteca.services.Acervo;
+import biblioteca.services.Formulario;
 import java.util.Scanner;
 // Nesta classe fica apenas o fluxo do programa
 public class main {
     public static void main(String[]args){
+        Formulario form = new Formulario();
+        Acervo novoAcervo = new Acervo();
         System.out.println("bem-vindo a biblioteca! ");
         System.out.println("o que deseja fazer: ");
         System.out.println("(1)Adicionar um item (2) consultar um item (3) alterar item (4) sair");
@@ -11,12 +14,9 @@ public class main {
         int x = scan.nextInt();
         scan.nextLine();
         if (x == 1){
-
+            form.Cadastro(novoAcervo);
         }
 
-
-
-
-
+        scan.close();
     }
 }
