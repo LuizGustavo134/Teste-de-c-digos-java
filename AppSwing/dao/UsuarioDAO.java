@@ -1,6 +1,6 @@
 package AppSwing.dao;
 
-import model.Usuario;
+import AppSwing.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

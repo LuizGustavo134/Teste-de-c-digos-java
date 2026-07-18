@@ -1,4 +1,4 @@
-package model;
+package AppSwing.model;
 
 public class Usuario {
     private String nome;

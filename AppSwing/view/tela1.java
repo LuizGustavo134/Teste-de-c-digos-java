@@ -1,7 +1,7 @@
 package AppSwing.view;
 
 import AppSwing.dao.UsuarioDAO;
-import model.Usuario;
+import AppSwing.model.Usuario;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
