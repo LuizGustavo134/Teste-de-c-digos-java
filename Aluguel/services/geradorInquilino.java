@@ -34,15 +34,14 @@ public class geradorInquilino {
     Random random = new Random();
 
     public void gerarInquilino(ListaInquilino listInq){
-        for (int i = 0; i<1;i++) {
-            int gerarNome = random.nextInt(0, nomes.length);
-            int exPredio = random.nextInt(0, 4);
-            int exBloco = random.nextInt(0, 3);
-            double aluguelPago = random.nextDouble(0, 900);
+        for (int i = 0; i<5;i++) {
+            int gerarNome = random.nextInt(1, nomes.length);
+            int exPredio = random.nextInt(1, predios.length);
+            int exBloco = random.nextInt(1, blocos.length);
+            double aluguelPago = random.nextDouble(0, 2000);
             String nome = nomes[gerarNome];
             String predio = predios[exPredio];
             String bloco = blocos[exBloco];
 
         inquilino ficha = new inquilino(nome,predio,bloco,aluguelPago);
-        listInq.addInquilino(ficha);
-}}}
+        listInq.addInquilino(ficha);  }}}

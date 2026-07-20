@@ -8,7 +8,7 @@
         private double aluguelPago;
         private String aluguelStatus;
         private final String aviso1 = "Débitos em dia!";
-        private final String aviso2 = "Pagamento não recebido";
+        private final String aviso2 = "Pagamento incompleto";
 
         public inquilino() {}
 
@@ -45,5 +45,53 @@
           +String.format("%.2f", aluguelPago)+" \n"
           +"Situação atual: \n"
           +definir_status(); // incompleto
+        }
+
+        public String getNome() {
+            return nome;
+        }
+
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+
+        public String getPredio() {
+            return predio;
+        }
+
+        public void setPredio(String predio) {
+            this.predio = predio;
+        }
+
+        public String getBloco() {
+            return bloco;
+        }
+
+        public void setBloco(String bloco) {
+            this.bloco = bloco;
+        }
+
+        public double getAluguelValor() {
+            return aluguelValor;
+        }
+
+        public void setAluguelValor(double aluguelValor) {
+            this.aluguelValor = aluguelValor;
+        }
+
+        public double getAluguelPago() {
+            return aluguelPago;
+        }
+
+        public void setAluguelPago(double aluguelPago) {
+            this.aluguelPago = aluguelPago;
+        }
+
+        public String getAluguelStatus() {
+            return aluguelStatus;
+        }
+
+        public void setAluguelStatus(String aluguelStatus) {
+            this.aluguelStatus = aluguelStatus;
         }
     }

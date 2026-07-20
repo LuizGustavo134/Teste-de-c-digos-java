@@ -10,15 +10,27 @@ public class main {
         ListaInquilino listadeinquilinos = new ListaInquilino();
         geradorInquilino gerador = new geradorInquilino();
         Scanner scan = new Scanner(System.in);
-        System.out.println("aperte (1) para começar e (2) para parar");
-        int opt = scan.nextInt();
 
+
+
+        int loop = 0;
+        gerador.gerarInquilino(listadeinquilinos);
         do {
-            gerador.gerarInquilino(listadeinquilinos);
-            listadeinquilinos.exibir_inquilinos();
-            int continuar = scan.nextInt();
-            opt = continuar;
-        } while (!(opt == 2 ));
+            System.out.println("(1)Consultar morardores (2)Pesquisar morador 3 sair");
+            int opt = scan.nextInt();
+            scan.nextLine();
+            if (opt == 1) {
+                listadeinquilinos.exibir_inquilinos();
+            } else if (opt == 2) {
+                System.out.println("infomorme o nome do morador: ");
+                String nome = scan.nextLine().trim();
+                listadeinquilinos.pesquisaPornome(nome);
+            }
+            loop = opt;
+        } while (!(loop == 3));
+
+
+
 
     }
 }
