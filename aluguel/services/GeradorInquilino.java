@@ -1,9 +1,9 @@
-package Aluguel.services;
-import Aluguel.entities.inquilino;
+package aluguel.services;
+import aluguel.entities.Inquilino;
 import java.util.Random;
 
 
-public class geradorInquilino {
+public class GeradorInquilino {
     public String[] nomes = {
             "João Silva",
             "Maria Oliveira",
@@ -27,13 +27,12 @@ public class geradorInquilino {
             "Patrícia Nascimento"};
     public String []predios = {null,"Predio A", "Predio B","Predio C"};
     public String []blocos = {null,"Bloco 1","Bloco 2"};
-    inquilino inqui = new inquilino();
 
-    public geradorInquilino() {}
+    public GeradorInquilino() {}
 
-    Random random = new Random();
+     private Random random = new Random();
 
-    public void gerarInquilino(ListaInquilino listInq){
+    public void gerarInquilinos(ListaInquilino listaInquilinos){
         for (int i = 0; i<5;i++) {
             int gerarNome = random.nextInt(1, nomes.length);
             int exPredio = random.nextInt(1, predios.length);
@@ -43,5 +42,5 @@ public class geradorInquilino {
             String predio = predios[exPredio];
             String bloco = blocos[exBloco];
 
-        inquilino ficha = new inquilino(nome,predio,bloco,aluguelPago);
-        listInq.addInquilino(ficha);  }}}
+        Inquilino inquilino = new Inquilino(nome,predio,bloco,aluguelPago);
+        listaInquilinos.addInquilino(inquilino);  }}}

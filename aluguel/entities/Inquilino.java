@@ -1,39 +1,40 @@
-    package Aluguel.entities;
+    package aluguel.entities;
 
-    public class inquilino {
+    public class Inquilino {
         private String nome;
         private String predio;
         private String bloco;
         private double aluguelValor = 900;
         private double aluguelPago;
         private String aluguelStatus;
-        private final String aviso1 = "Débitos em dia!";
-        private final String aviso2 = "Pagamento incompleto";
+        private final String AVISO1 = "Débitos em dia!";
+        private final String AVISO2 = "Pagamento incompleto";
 
-        public inquilino() {}
+        public Inquilino() {}
 
-        public inquilino(String nome, String predio, String bloco, double aluguelPago, String aluguelStatus) {
+        public Inquilino(String nome, String predio, String bloco, double aluguelPago, String aluguelStatus) {
             this.nome = nome;
             this.predio = predio;
             this.bloco = bloco;
             this.aluguelPago = aluguelPago;
             this.aluguelStatus = aluguelStatus;// preciso adiciona esse valor
         }
-        public inquilino(String nome, String predio, String bloco, double aluguelPago) {
+        public Inquilino(String nome, String predio, String bloco, double aluguelPago) {
             this.nome = nome;
             this.predio = predio;
             this.bloco = bloco;
             this.aluguelPago = aluguelPago;
         }
+
         public String definir_status(){
             if (aluguelPago > 900 || aluguelPago == 900){
-                aluguelStatus = aviso1;
+                aluguelStatus = AVISO1;
             } else{
-                aluguelStatus = aviso2;
+                aluguelStatus = AVISO2;
             }
             return aluguelStatus;
         }
-
+        @Override
         public String toString(){
          return "==========Inquilino==============\n"
          +nome +" \n"
